@@ -1,0 +1,120 @@
+/*設定全部的margin跟padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*設定所有圖片的邊框為0*/
+img {
+    border: 0;
+}
+
+.bgset {
+    background-color: #ede0d4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #7f5539;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+/*nav的連結*/
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/*nav的動畫*/
+nav a:hover {
+    color: #dea360;
+    text-decoration: none;
+}
+
+h1 {
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #ede0d4;
+}
+
+main {
+    background-color: #ede0d4;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.add {
+    border: 2px #000 solid;
+    padding: 50px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container1 {
+    background-color: #7f5539;
+    float: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px;
+}
+
+.container2 {
+    float: center;
+    margin-top: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.board {
+    background-color: #e6ccb2;
+    text-align: center;
+    border: #000 1px solid;
+    padding: 10px;
+}
+
+/*回TOP*/
+.pagetop {
+    text-align: right;
+}
+
+/*版權*/
+.copyright {
+    border-top: solid 5px #A16F36;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.fix {
+    clear: both;
+}
+
+footer {
+    background-color: #ede0d4;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1em;
+    padding: 20px;
+}

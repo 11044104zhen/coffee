@@ -1,0 +1,89 @@
+<%@ page import = "java.sql.*, java.util.*"%>
+<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+	
+		request.setCharacterEncoding("UTF-8");
+					
+		String receivername = request.getParameter("name");
+		String address = request.getParameter("addr");
+		String tel = request.getParameter("tel");
+		String email = request.getParameter("email");
+		String payway = request.getParameter("pay_way");
+		
+		
+		
+
+	try {
+			Class.forName("com.mysql.jdbc.Driver");
+			try {	
+				String url="jdbc:mysql://localhost/?serverTimezone=UTC";
+				Connection con=DriverManager.getConnection(url,"root","1234");
+				if(con.isClosed())
+				   out.println("警告：連線建立失敗！");
+				else{
+					
+					String sql="USE `coffee`";
+					con.createStatement().execute(sql);
+					
+					String userid=(String)session.getAttribute("id");
+					String productid=request.getParameter("product_id");
+					String number=request.getParameter("product_number");
+					String order_number=(String)application.getAttribute("order_number");
+					int ordernumber=0;
+					try {
+						ordernumber = Integer.parseInt(order_number);
+					} 
+					catch (NumberFormatException e) {
+						// 處理轉換異常的情况
+						e.printStackTrace(); // 或輸出自定義的錯誤訊息
+					}
+
+					String sql1 = "SELECT * FROM `cart` WHERE `customer_id`='" +userid+"'"; //抓購物車，查詢對應使用者 
+					ResultSet rs1 =con.createStatement().executeQuery(sql1);
+					
+				while(rs1.next()){
+					
+					String sql4="SELECT * FROM `products` WHERE `id`='"+rs1.getString(2)+"'";
+					ResultSet rs4=con.createStatement().executeQuery(sql4);
+					
+					while(rs4.next()){
+						int stock=rs4.getInt(7);//原本庫存
+						int price=rs4.getInt(6);
+						int stock2=Integer.valueOf(rs1.getString(3)).intValue();//購買數量
+						int total=price*stock2;
+						String sql2="INSERT INTO `orders`(`customer_id`,`product_id`,`name`,`tel`,`email`,`addr`,`product_number`,`pay_way`,`total`,`orders_number`)";
+						sql2+=" values('"+userid+"','"+rs1.getString(2)+"','"+receivername+"','"+tel+"','"+email+"','"+address+"','"+rs1.getString(3)+"','"+payway+"','"+total+"','"+ordernumber+"')"; 
+						con.createStatement().execute(sql2);
+				
+						int c=stock-stock2;//庫存扣除
+						String sql5="UPDATE `products` SET `iventory`='"+c+"' WHERE `id` ='"+rs1.getString(2)+"'";//庫存存回去
+						con.createStatement().execute(sql5);
+
+						
+					}
+					String cartid=rs1.getString(4);
+					String sql3="DELETE FROM `cart` WHERE `cart_id`='"+cartid+"'";//清空購物車
+					con.createStatement().execute(sql3);
+					
+				}		
+						ordernumber++;
+						order_number = String.valueOf(ordernumber);
+						application.setAttribute("order_number", order_number);
+
+						out.print("<script>alert('您的訂單已完成!');location.href='members.jsp'</script>");
+			   
+						con.close();
+									
+				}
+			}
+				
+			catch (SQLException sExec) {
+				out.println("警告：MySQL 錯誤！"+sExec.toString()); // MySQL 錯誤警告
+			}
+		}
+		catch (ClassNotFoundException err) {
+		  out.println("警告：class 錯誤！"+err.toString()); // JDBC 錯誤警告
+		}
+	
+%>

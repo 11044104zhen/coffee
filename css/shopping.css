@@ -1,0 +1,229 @@
+/*設定全部的margin跟padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*設定所有圖片的邊框為0*/
+img {
+    border: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #7f5539;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+/*nav的連結*/
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/*nav的動畫*/
+nav a:hover {
+    color: #dea360;
+    text-decoration: none;
+}
+
+
+
+/*回TOP*/
+.pagetop {
+    text-align: right;
+}
+
+/*版權*/
+.copyright {
+    border-top: solid 5px #A16F36;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: #ede0d4;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1em;
+    padding: 20px;
+}
+
+
+body {
+    background-color: #ede0d4;
+}
+
+section {
+    margin: 20px;
+}
+
+/*商品區塊*/
+.area {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.area2 {
+    width: 100%;
+    display: flex-wrap;
+}
+
+.block {
+    /*width: 70%;*/
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*商品圖片*/
+.itemimg {
+    border-radius: 50%;
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    color: #7f5539;
+}
+
+/*商品文字區*/
+.card1 {
+    padding: 20px;
+    margin: 20px 40px;
+    border-radius: 10px;
+    background-color: #FEFAE0;
+    float: right;
+    width: 30%;
+}
+
+.text {
+    line-height: 8mm;
+
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.price {
+
+    padding: 20px;
+    margin: 0% 28.6% 0% 0%;
+    border-radius: 10px;
+    background-color: #FEFAE0;
+}
+
+/*按鈕*/
+.buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #7f5539;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buy:hover {
+    background-color: black;
+}
+
+.delete {
+    padding: 10px 20px;
+    border: none;
+    background: #7f5539;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: black;
+}
+
+.btn1 {
+    height: 23px;
+    width: 20px;
+    background: #e6ccb2;
+    border: none;
+    position: relative;
+
+}
+
+
+/*boostrap跳出視窗*/
+.modal-header {
+    height: 100px;
+    background-color: #b08968;
+}
+
+.modal-footer {
+    height: 50px;
+    background-color: #b08968;
+}
+
+.modal-header h3 {
+    font-size: 30px;
+    color: white;
+    /* 置中 */
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-body {
+    background-color: #ede0d4;
+}
+
+.modal-body form .account,
+.modal-body form .password {
+    margin: 30px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.paytxt {
+    margin: 30px 0px 0px 30px;
+    width: 90%;
+}
+
+.remember {
+    margin-bottom: 20px;
+}
+
+.modal-body form .btn {
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    background-color: #b08968;
+    border: #432d1d;
+}
+
+.modal-footer .signup span {
+    text-align: center;
+    color: #FFFFFF;
+}

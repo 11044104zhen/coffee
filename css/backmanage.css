@@ -1,0 +1,67 @@
+/*設定全部的margin跟padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*設定所有圖片的邊框為0*/
+img {
+    border: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #7f5539;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    font-size: 23px;
+}
+
+/*nav的連結*/
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 25px;
+
+}
+
+/*nav的動畫*/
+nav a:hover {
+    color: #dea360;
+    text-decoration: none;
+}
+
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 15px;
+    margin-left: 29%;
+    color: white;
+}
+
+.logout{
+    position: absolute;
+    top: 2%;
+    left: 94.5%;
+  
+}
+
+
+
+body {
+    background-image:url(../image/coffeebean.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+

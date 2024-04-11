@@ -1,0 +1,49 @@
+<%@page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*"%>
+<%@include file="config.jsp" %>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>更新會員資料</title>
+
+<%
+	String username=request.getParameter("account");
+	String sex=request.getParameter("sex");
+	String birth=request.getParameter("birthday");
+	String tel=request.getParameter("tel");
+	String pwd=request.getParameter("password");
+	String checkpwd=request.getParameter("checkpassword");		
+	String email=request.getParameter("email");
+	
+	
+
+if (session.getAttribute("id") != null) {
+    if (request.getParameter("account") != null) {
+        String sql = "UPDATE `members` SET `customer_id`="", `sex`="", `birthday`="", `tel`="", `pwd`="", `checkpwd`="", `email`="" WHERE `customer_id`=?";
+        PreparedStatement pstmt = con.prepareStatement(sql);
+        
+        pstmt.setString(1, username);
+        pstmt.setString(2, sex);
+        pstmt.setString(3, birth);
+        pstmt.setString(4, tel);
+        pstmt.setString(5, pwd);
+        pstmt.setString(6, checkpwd);
+        pstmt.setString(7, email);
+        pstmt.setString(8, session.getAttribute("id").toString());
+
+        int rowsUpdated = pstmt.executeUpdate();
+        
+        if (rowsUpdated > 0) {
+            out.println("<script language='javascript'>alert('更新成功!!');window.location.href='members.jsp';</script>");
+        } else {
+            out.println("<script language='javascript'>alert('更新失敗!!請填寫完整資訊');window.location.href='members.jsp';</script>");
+        }
+
+        pstmt.close();
+    }
+}
+
+%>
+<h1><font color="red">您尚未登入，請登入！</font></h1>
+<form action="check.jsp" method="POST">
+帳號：<input type="text" name="id" /><br />
+密碼：<input type="password" name="pwd" /><br />
+<input type="submit" name="b1" value="登入" />
+</form>

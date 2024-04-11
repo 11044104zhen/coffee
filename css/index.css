@@ -1,0 +1,120 @@
+/*設定全部的margin跟padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*設定所有圖片的邊框為0*/
+img {
+    border: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #7f5539;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+/*nav的連結*/
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/*nav的動畫*/
+nav a:hover {
+    color: #dea360;
+    text-decoration: none;
+}
+
+/*主要圖片*/
+.ADcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    margin: 0;
+    background-color: #ede0d4;
+}
+
+/*廣告動畫設定*/
+#change {
+    position: relative;
+    width: 500px;
+    height: 380px;
+    overflow: hidden;
+}
+
+#change img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/*article的文字邊界*/
+article {
+    padding: 32px 16px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/*文字區塊1*/
+.profile {
+    background-color: #b08968;
+    color: #FFFFFF;
+}
+
+/*文字區塊2*/
+.profile2 {
+    background-color: #b08968;
+    color: #FFFFFF;
+}
+
+/*主文*/
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*副文*/
+.something {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*回TOP*/
+.pagetop {
+    text-align: right;
+}
+
+/*版權*/
+.copyright {
+    border-top: solid 5px #A16F36;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: #ede0d4;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1em;
+    padding: 20px;
+}

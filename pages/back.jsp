@@ -1,0 +1,42 @@
+<%@ page import = "java.sql.*, java.util.*"%>
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增商品</title>
+    <link rel="icon" href="../image/icon.ico">
+    <link rel="stylesheet" href="../css/backmanage.css"> <!--連結CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+  <body>
+    <div>
+		<div class="backg"></div>
+    </div>
+      
+    <header>
+        <div class="logo"> <!--LOGO-->
+            <a href="#"><img src="../image/logo.png" style="width: 100px; height: 100px;"></a>
+        </div>
+        <h1>後台管理系統</h1>
+        <nav>
+            <a href="back_new.jsp">新增商品</a>
+            <a href="back_delete.jsp">刪除商品</a>
+            <a href="back_alter.jsp">修改商品</a>
+            <a href="order_view.jsp">瀏覽訂單</a>
+        </nav>
+        <div>
+            <a href="login.jsp" class="logout"><p>
+                <img src="../image/logout.png" alt="" style="width:100px; height:100px;" >
+            </p></a>
+        </div>
+    </header>
+
+	
+	<footer style="background-color: #7f5539; width: 100%; height:4%; position: absolute; bottom: 0;"></footer>
+</body>
+</html>

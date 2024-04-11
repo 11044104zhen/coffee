@@ -1,0 +1,254 @@
+/*設定全部的margin跟padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*設定所有圖片的邊框為0*/
+img {
+    border: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #7f5539;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+/*nav的連結*/
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/*nav的動畫*/
+nav a:hover {
+    color: #dea360;
+    text-decoration: none;
+}
+
+
+
+/*回TOP*/
+.pagetop {
+    text-align: right;
+}
+
+/*版權*/
+.copyright {
+    border-top: solid 5px #A16F36;
+    text-align: center;
+    padding-top: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    text-align: center;
+}
+
+footer {
+    background-color: #ede0d4;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1em;
+    padding: 20px;
+}
+
+
+body {
+    background-color: #ede0d4;
+}
+
+section {
+    margin: 20px;
+}
+
+/*商品區塊*/
+
+.block {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin: 3% 0% 2% 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*商品圖片*/
+.itemimg {
+    border-radius: 50%;
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    color: #7f5539;
+}
+
+.square1 {
+    margin: 5% 0% 0% 20%;
+    width: 400px;
+    height: 300px;
+    background: #b08868d5;
+    position: relative;
+    z-index: 0;
+    float: left;
+}
+
+.square2 {
+    margin: 5% 20% 0% 0%;
+    width: 40%;
+    height: 300px;
+    background: #e6ccb2;
+    position: relative;
+    z-index: 0;
+    float: right;
+}
+
+
+.title {
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    line-height: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.txt {
+    margin: 40px;
+    font-size: 20px;
+    line-height: 10mm;
+
+}
+
+/*購物記錄區塊*/
+.block2 {
+    width: 80%;
+    display: flex;
+    margin: 0.1% 0% 0% 20%
+        /*對齊*/
+}
+
+.card1 {
+    padding-left: 3%;
+    background-color: #e6ccb284;
+    width: 75%;
+    /*寬度*/
+    border: 0px;
+
+}
+
+.itemimg-p {
+    border-radius: 50%;
+    float: left;
+    margin: 2% 1% 1% 1%;
+    width: 150px;
+    height: 150px;
+}
+
+.txt-p {
+    margin: 4% 0% 4% 22%;
+    line-height: 10mm;
+
+}
+
+.edit {
+    margin: 2% 0% 0% 30%;
+    padding: 3px 12px;
+    border: none;
+    background: #7f5539;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+.edit:hover {
+    background-color: black;
+}
+
+/*boostrap跳出視窗*/
+.modal-header {
+    height: 100px;
+    background-color: #b08968;
+}
+
+.modal-footer {
+    height: 50px;
+    background-color: #b08968;
+}
+
+.modal-header h3 {
+    font-size: 30px;
+    color: white;
+    /* 置中 */
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-body {
+    background-color: #ede0d4;
+}
+
+.modal-body form .account,
+.modal-body form .password {
+    margin: 30px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.remember {
+    margin-bottom: 20px;
+}
+
+.modal-body form .btn {
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    background-color: #b08968;
+    border: #432d1d;
+}
+
+.modal-footer .signup span {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*評論紀錄*/
+.myname {
+    margin: 2% 0% 0% 1%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #432d1d;
+}
+
+.date {
+    font-size: 14px;
+    margin: 0% 0% 0% 6%;
+    color: rgb(150, 140, 140);
+}
+
+.conment {
+    margin: 0% 1% 3% 6%;
+}

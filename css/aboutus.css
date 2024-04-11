@@ -1,0 +1,90 @@
+/*設定全部的margin跟padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*設定所有圖片*/
+img {
+    border: 0;
+    width: 300px;
+    height: 250px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #7f5539;
+}
+
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+/*nav的連結*/
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+main {
+    background-color: #ede0d4;
+}
+
+h1 {
+    background-color: #ede0d4;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.us {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ede0d4;
+}
+
+.text {
+    margin-left: 20px;
+    margin: 20;
+}
+
+.text h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 14px;
+}
+
+.set {
+    height: 1px;
+    background-color: #7f5539;
+    margin: 20px auto;
+    max-width: 75%;
+}
+
+.copyright {
+    border-top: solid 5px #A16F36;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: #ede0d4;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1em;
+    padding: 20px;
+}
+
+.pagetop {
+    text-align: right;
+}
